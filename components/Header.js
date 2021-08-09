@@ -14,7 +14,7 @@ import {Entypo} from "@expo/vector-icons";
 const Header = () => {
     return (
         <HeaderView>
-            <HeaderTitle>Tennis App</HeaderTitle>
+            <HeaderTitle>Tennis App Amendment</HeaderTitle>
             <HeaderButton>
                 <Entypo name="trash" size={25} color={colors.tertiary}/>
             </HeaderButton>
