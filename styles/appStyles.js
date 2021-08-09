@@ -138,7 +138,7 @@ export const StyledInput = styled.TextInput`
     font-size: 16px;
     border-radius: 10px;
     color: ${colors.secondary};
-    letter-spcaing: 1px;
+    letter-spacing: 1px;
 `;
 
 export const ModalAction = styled.TouchableOpacity`
