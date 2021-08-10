@@ -5,5 +5,7 @@ Currently using README for tracking the version history success rate, as there a
 ## Commit success
 
 initial commit- success
-second commit- ???
-third commit- ???
+second commit- success
+third commit- failure
+
+### Will have to re-do from the second commit.
