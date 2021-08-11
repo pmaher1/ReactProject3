@@ -1,20 +1,35 @@
 import React, {useState} from 'react';
 
+import { StyleSheet, Text, View } from 'react-native';
+//import {Text}from 'react-native';
+
 // components
 import Header from "./Header";
 import Listitems from "./Listitems";
 import InputModal from './InputModal';
 
-// async storage
-import AsyncStorage from '@react-native-async-storage/async-storage';
+const Home = () => {
 
-const Home = ({todos, setTodos}) => {
+    //initial todos
+    const initialTodos = [{
+        title: "Use a racket",
+        date: "Fri, 20 Jan 2021 idk the time",
+        key: "1",
+    }, {
+        title: "Get Balls",
+        date: "Fri, 20 Jan 2021 idk the time",
+        key: "2",
+    }, {
+        title: "Go to tennis",
+        date: "Fri, 20 Jan 2021 idk the time",
+        key: "3",
+    }]
+
+    const [todos, setTodos] = useState(initialTodos);
 
     // clear all todos
     const handleClearTodos = () => {
-        AsyncStorage.setItem("storedTodos", JSON.stringify([])).then(() => {
-            setTodos([]);
-        }).catch(error => console.log(error));
+        setTodos([]);
     }
 
     //Modal visiblity & input value
@@ -24,12 +39,8 @@ const Home = ({todos, setTodos}) => {
     //function to add a new todo
     const handleAddTodo = (todo) => {
         const newTodos = [...todos, todo];
-        
-
-        AsyncStorage.setItem("storedTodos", JSON.stringify([newTodos])).then(() => {
-            setTodos(newTodos);
-            setModalVisible(false);
-        }).catch(error => console.log(error));
+        setTodos(newTodos);
+        setModalVisible(false);
     }
 
     //Editing
