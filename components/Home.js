@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 
-import { StyleSheet, Text, View } from 'react-native';
-//import {Text}from 'react-native';
 
 // components
 import Header from "./Header";
 import Listitems from "./Listitems";
 import InputModal from './InputModal';
+
+//async storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Home = ({todos, setTodos}) => {
 
